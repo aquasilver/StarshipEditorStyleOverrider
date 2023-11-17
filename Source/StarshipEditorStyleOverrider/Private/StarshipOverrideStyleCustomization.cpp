@@ -454,6 +454,15 @@ void FStarshipOverrideStyleCustomization::MakeThemePickerRow(IDetailPropertyRow&
 					{
 						return !UStarshipOverrideStyleThemeManager::Get().IsCurrentDefaultTheme();
 					})
+						.ToolTipText_Lambda(
+						[]()
+					{	
+						if (UStarshipOverrideStyleThemeManager::Get().IsCurrentDefaultTheme())
+						{
+							return LOCTEXT("CannotEditDefaultThemeToolTip", "Default themes can't be edited");
+						}
+						return LOCTEXT("EditThemeToolTip", "Edit this theme");
+					})
 						.OnClicked(this, &FStarshipOverrideStyleCustomization::OnEditThemeClicked)
 				]
 				+ SHorizontalBox::Slot()
@@ -463,6 +472,7 @@ void FStarshipOverrideStyleCustomization::MakeThemePickerRow(IDetailPropertyRow&
 				[
 					SNew(SSimpleButton)
 						.Icon(FAppStyle::Get().GetBrush("Icons.Duplicate"))
+						.ToolTipText(LOCTEXT("DuplicateThemeToolTip", "Duplicate this theme and edit it"))
 						.OnClicked(this, &FStarshipOverrideStyleCustomization::OnDuplicateAndEditThemeClicked)
 				]
 				//+ SHorizontalBox::Slot()
@@ -495,6 +505,15 @@ void FStarshipOverrideStyleCustomization::MakeThemePickerRow(IDetailPropertyRow&
 						[]()
 					{
 						return !UStarshipOverrideStyleThemeManager::Get().IsCurrentDefaultTheme(); 
+					})
+						.ToolTipText_Lambda(
+						[]()
+					{
+						if (UStarshipOverrideStyleThemeManager::Get().IsCurrentDefaultTheme())
+						{
+							return LOCTEXT("CannotDeleteDefaultThemeToolTip", "Default themes can't be deleted");
+						}
+						return LOCTEXT("DeleteThemeToolTip", "Delete this theme");
 					})
 						.OnClicked(this, &FStarshipOverrideStyleCustomization::OnDeleteThemeClicked)
 				]
