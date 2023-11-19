@@ -4,6 +4,7 @@
 Starship Editor Style Overrider is a code plugin for UE5.
 It allows you to adjust the Style recognized by the editor.
 
+You can change the color of the search box when it is focused by adjusting the TextBoxStyle/FocusedForegroundColor of the "Search Box" widget style.
 
 ## How to use
 1. Activate this plugin and launch the editor.
