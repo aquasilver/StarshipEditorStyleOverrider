@@ -15,8 +15,8 @@ It allows you to adjust the Style recognized by the editor.
 7. Select Save
 
 ## Support Version
--Unreal Engine 5.2.1
--Unreal Engine 5.3.2
+- Unreal Engine 5.2.1
+- Unreal Engine 5.3.2
 
 Example
 You can change the color of the search box when it is focused by adjusting the TextBoxStyle/FocusedForegroundColor of the "Search Box" widget style.
@@ -38,5 +38,5 @@ Starship Editor Style OverriderはUE5のコードプラグインです。
 7. セーブする
 
 ## Support Version
--Unreal Engine 5.2.1
--Unreal Engine 5.3.2
+- Unreal Engine 5.2.1
+- Unreal Engine 5.3.2
