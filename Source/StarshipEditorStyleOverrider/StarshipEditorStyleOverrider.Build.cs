@@ -15,7 +15,7 @@ public class StarshipEditorStyleOverrider : ModuleRules
 			);
 
 
-		if (!(Target.Version.MajorVersion >= 5 && Target.Version.MinorVersion >= 3 && Target.Version.PatchVersion >= 2))
+		if (!(Target.Version.MajorVersion >= 5 && Target.Version.MinorVersion >= 3))
 		{
 			PrivateIncludePaths.AddRange(
 				new string[] {
