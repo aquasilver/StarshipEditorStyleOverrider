@@ -3,7 +3,7 @@
 #include "StarshipOverrideStyleRowExtensionHandler.h"
 #include "StarshipOverrideStyleCustomization.h"
 #include "DetailWidgetRow.h"
-#if !(ENGINE_MAJOR_VERSION >= 5 && ENGINE_MINOR_VERSION >= 3 && ENGINE_PATCH_VERSION >= 2)
+#if !(ENGINE_MAJOR_VERSION >= 5 && ENGINE_MINOR_VERSION >= 3)
 #include "PropertyNode.h"
 #endif
 
@@ -32,7 +32,7 @@ void FStarshipOverrideStyleRowExtensionHandler::ExtendWidgetRow(FDetailWidgetRow
 	}
 	ECheckBoxState InitialState = ECheckBoxState::Unchecked;
 
-#if ENGINE_MAJOR_VERSION >=	5 && ENGINE_MINOR_VERSION >= 3 && ENGINE_PATCH_VERSION	>= 2
+#if ENGINE_MAJOR_VERSION >=	5 && ENGINE_MINOR_VERSION >= 3
 	const FString PropertyPath(InPropertyHandle->GetPropertyPath());
 #else
 	const FString& PropertyPath = InPropertyHandle->GetPropertyNode()->GetPropertyPath();
