@@ -2,8 +2,8 @@
 
 #include "StarshipOverrideStyleObjectData.h"
 #include "JsonObjectConverter.h"
+#include "PropertyHandle.h"
 #include "StarshipOverrideThemeManager.h"
-#include "StarshipOverridePropertyCustomization.h"
 #include "StarshipOverrideStyleRawDataHandler.h"
 
 namespace PrivateCPP

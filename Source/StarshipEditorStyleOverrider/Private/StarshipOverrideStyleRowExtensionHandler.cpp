@@ -3,6 +3,7 @@
 #include "StarshipOverrideStyleRowExtensionHandler.h"
 #include "StarshipOverrideStyleCustomization.h"
 #include "DetailWidgetRow.h"
+#include "PropertyHandle.h"
 #if !(ENGINE_MAJOR_VERSION >= 5 && ENGINE_MINOR_VERSION >= 3)
 #include "PropertyNode.h"
 #endif

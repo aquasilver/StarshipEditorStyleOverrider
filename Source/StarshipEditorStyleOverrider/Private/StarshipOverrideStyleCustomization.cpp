@@ -2,7 +2,6 @@
 
 #include "StarshipOverrideStyleCustomization.h"
 #include "StarshipOverrideStyleSettings.h"
-#include "StarshipOverridePropertyCustomization.h"
 #include "StarshipOverrideStyleRowExtensionHandler.h"
 #include "StarshipOverrideThemeManager.h"
 #include "StarshipEditorStyleWidgetTree.h"
@@ -133,9 +132,6 @@ void SStarshipOverrideStyleEditor::Construct(const FArguments& InArgs, TSharedRe
 
 	RowExtensionHandler = MakeShared<FStarshipOverrideStyleRowExtensionHandler>(SharedThis(this)).ToSharedPtr();
 	StyleInspector->GetPropertyView()->SetExtensionHandler(RowExtensionHandler.ToSharedRef());
-	//StyleInspector->GetPropertyView()->OnFinishedChangingProperties().AddSP(this, &SStarshipOverrideStyleEditor::OnFinishedChangingProperties);
-	//FOnGetDetailCustomizationInstance LayoutVariableDetails = FOnGetDetailCustomizationInstance::CreateStatic(&FStarshipOverridePropertyCustomization::MakeInstance, SharedThis(this).ToWeakPtr());
-	//StyleInspector->GetPropertyView()->RegisterInstancedCustomPropertyLayout(UPropertyWrapper::StaticClass(), LayoutVariableDetails);
 }
 
 void SStarshipOverrideStyleEditor::OnSelectionChanged(const FName& InStyleSetName, EStarshipOverrideHandlerCategory InCategoryType)
