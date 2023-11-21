@@ -5,7 +5,6 @@
 #include "Styling/ToolBarStyle.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Styling/SlateStyle.h"
-#include "StarshipOverridePropertyCustomization.h"
 #include "StarshipOverrideStyleSettings.h"
 
 #define LOCTEXT_NAMESPACE "StarshipEditorStyleOverrider"
