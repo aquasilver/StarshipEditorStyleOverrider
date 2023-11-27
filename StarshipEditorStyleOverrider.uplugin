@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"Version": 1,
+	"Version": 2,
 	"VersionName": "1.0",
 	"FriendlyName": "Starship Editor Style Overrider",
 	"Description": "",
@@ -8,7 +8,7 @@
 	"CreatedBy": "aquasilver",
 	"CreatedByURL": "https://github.com/aquasilver/StarshipEditorStyleOverrider",
 	"DocsURL": "",
-	"MarketplaceURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5aef6bbc0e0c497a882e5dfd9bc0a2aa",
 	"SupportURL": "",
 	"EngineVersion": "5.2.0",
 	"CanContainContent": true,

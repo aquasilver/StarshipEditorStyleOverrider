@@ -2,6 +2,7 @@
 
 #include "StarshipOverrideThemeManager.h"
 #include "JsonObjectConverter.h"
+#include "Interfaces/IPluginManager.h"
 #include "Styling/ToolBarStyle.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Styling/SlateStyle.h"
@@ -45,8 +46,11 @@ void UStarshipOverrideStyleThemeManager::LoadThemes()
 	CalcStyleDefines();
 	Themes.Empty();
 
-	FString PluginPath = FPaths::ProjectPluginsDir();
-	LoadThemesFromDirectory(FPaths::Combine(PluginPath, "StarshipEditorStyleOverrider", "Content"));
+	TSharedPtr<IPlugin> FoundPlugin = IPluginManager::Get().FindPlugin("StarshipEditorStyleOverrider");
+	check(FoundPlugin);
+
+	FString PluginPath = FoundPlugin->GetBaseDir();
+	LoadThemesFromDirectory(FPaths::Combine(PluginPath, "Content"));
 
 	check(Themes.Num() == 1);
 	CurrentThemeId = Themes[0].Id;
